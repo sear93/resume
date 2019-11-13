@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    font-family: 'Ubuntu', sans-serif;
+    background: url(../img/email-pattern.png) fixed;
+    display: grid;
+    grid-template-areas: 'header header' 'resume resume-second';
+    grid-gap: 10px;
+    grid-template-columns: 59% 40%;
+    width: 60vw;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 0 10px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #400000;
+    transition: all 0.5s ease;
+    padding: 2px;
+}
+
+a:hover{
+    color: #400000;
+    background-color: rgba(92, 67, 67, 0.5);
+    border-radius: 5px;
+}
+
+.switch a:hover {
+    background-color: transparent;
+}
+
+.switch a:first-child:after{
+    content: " ";
+    display: inline-block;
+    width: 2px;
+    height: 13px;
+    background: #400000;
+    vertical-align: middle;
+    margin-left: 6px;
+
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h3{
+    display: flex;
+    border-bottom: 3px solid red;
+    align-items: center;
+}
+
+h3::before {
+    content: '/';
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.resume-name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 10%
+}
+
+.resume-img img {
+    border-radius: 50%;
+    border: 3px solid #400000;
+    margin-right: 10vw;
+}
+
+.resume {
+    grid-area: resume;
+}
+
+.resume-second {
+    grid-area: resume-second;
+}
+
+/* .experience {
+    display: flex;
+    justify-content: center;
+} */
